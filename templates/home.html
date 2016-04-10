@@ -1,0 +1,26 @@
+<div class="row">
+
+<div class="col-md-6 col-md-offset-3">
+	<div class="jumbotron">
+		<h1>Welcome to GULM</h1>
+
+		<p>
+			Here you can get the mastering level of a github user. <br>
+			Enter a username below and check it out.
+		</p>
+		<p>
+			<div class="form-group label-floating is-empty">
+							<label for="username" class="control-label">Username</label>
+							<input type="text" class="form-control" ng-model="username" id="username">
+						<span class="material-input"></span>
+			</div>
+		</p>
+		<p><a class="btn btn-primary btn-lg" href="#/user/{{username}}">Go!</a></p>
+	</div>
+</div>
+
+</div>
+
+<script>
+	$.material.init();
+</script>

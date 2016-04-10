@@ -1,0 +1,25 @@
+{
+  "name": "GULM",
+  "homepage": "https://github.com/jeffersonmourak/GULM",
+  "description": "GitHub User Language Mastering App",
+  "main": "index.html",
+  "moduleType": [],
+  "authors": [
+    "jeffersonmourak"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.3",
+    "bootstrap": "^3.3.6",
+    "bootstrap-material-design": "^0.5.9",
+    "jquery": "^2.2.3",
+    "angular-ui-router": "^0.2.18"
+  }
+}

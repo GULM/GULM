@@ -1,0 +1,26 @@
+{
+  "name": "gulm",
+  "version": "1.0.0",
+  "description": "Github User Language Mastering",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersonmourak/GULM.git"
+  },
+  "author": "jeffersonmourak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffersonmourak/GULM/issues"
+  },
+  "homepage": "https://github.com/jeffersonmourak/GULM#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-jshint": "^2.0.0",
+    "gulp-uglifyjs": "^0.6.2"
+  }
+}

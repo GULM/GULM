@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="gulm">
+<head>
+	<meta charset="utf-8">
+	<title>GULM (GitHub User Language Mastering)</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
+
+	<style>
+
+	#chart_div svg rect {
+		fill: transparent !important;
+	}
+
+	body{
+		overflow-x: hidden;
+	}
+
+	</style>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-success">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">
+					GULM (GitHub User Language Mastering)
+				</a>
+			</div>
+		</div>
+	</nav>
+
+	<div ui-view></div>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+	<script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<script src="static/js/application/app.js"></script>
+	<script src="static/js/application/controllers/userController.js"></script>
+	<script src="static/js/application/services/githubService.js"></script>
+
+	<script>
+		$.material.init();
+	</script>
+
+
+</body>
+</html>
