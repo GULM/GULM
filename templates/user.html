@@ -4,6 +4,15 @@
 		<div class="jumbotron">
 			<h2>Status from {{username}}</h2>
 			<div id="chart_div"></div>
+			<p>
+				Battle with
+				<div class="form-group label-floating is-empty">
+								<label for="username" class="control-label">Username</label>
+								<input type="text" class="form-control" ng-model="against" id="username">
+							<span class="material-input"></span>
+				</div>
+			</p>
+			<p><a class="btn btn-primary btn-lg" href="#/battle/{{username}}/{{against}}">Start Battle</a></p>
 			<h3>Repositories</h3>
 			<table class="table table-striped table-hover ">
 				<thead>
