@@ -24,6 +24,6 @@ gulp.task('lint', function() {
 gulp.task('concatApp', function() {
   return gulp.src(dependencies.application)
     .pipe(concat('application.min.js'))
-    .pipe(uglify({outSourceMap:true, mangle: false }))
+    .pipe(uglify({outSourceMap:true }))
     .pipe(gulp.dest('static/js'));
 });

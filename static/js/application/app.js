@@ -1,9 +1,10 @@
 (function(){
 	"use strict";
 	google.charts.load('current', {'packages':['corechart']});
-	// angular.module('gulm',['ui.router', "gulm.controllers","gulm.services", "gulm.battle.controllers"])
-	angular.module('gulm',['ui.router', "gulm.controllers","gulm.services", "gulm.battle.controllers"])
-	.config(function($stateProvider, $urlRouterProvider) {
+
+
+
+	var Routes = function($stateProvider, $urlRouterProvider) {
 
 		$urlRouterProvider.otherwise('/home');
 
@@ -22,6 +23,11 @@
 	    templateUrl: 'templates/battle.html',
 			controller: "battleController"
 	  });
-	});
+	};
+
+	Routes.$inject = ['$stateProvider','$urlRouterProvider'];
+
+	angular.module('gulm',['ui.router', "gulm.controllers","gulm.services", "gulm.battle.controllers"])
+	.config(Routes);
 
 }());
