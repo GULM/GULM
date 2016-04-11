@@ -38,7 +38,7 @@
 					drawChart(user);
 				}
 			});
-		}
+		};
 
 		$scope.users.forEach(function(user, index){
 			github(user.username).repos.then(function(response){
@@ -61,21 +61,15 @@
 
 		function drawChart(user) {
 
-        // Create the data table.
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Language');
         data.addColumn('number', 'Lines');
         data.addRows(convertToRows(user));
 
-        // Set chart options
-        var options = {'title':'Language Mastering of ' + $scope.users[user].username,
-											"pieHole": 0.4,
-                       'height':400};
-
-        // Instantiate and draw our chart, passing in some options.
+        var options = {'title':'Language Mastering of ' + $scope.users[user].username, "pieHole": 0.4, 'height':400};
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'+user));
         chart.draw(data, options);
       }
 
 	}
-}())
+}());

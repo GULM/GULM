@@ -11,5 +11,11 @@
 		"bower_components/bootstrap/dist/css/bootstrap.min.css",
 		"bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css",
 		"bower_components/bootstrap-material-design/dist/css/ripples.min.css"
+	],
+	"application": [
+		"static/js/application/app.js",
+		"static/js/application/controllers/userController.js",
+		"static/js/application/services/githubService.js",
+		"static/js/application/controllers/battleController.js"
 	]
 }

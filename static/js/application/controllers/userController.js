@@ -24,7 +24,7 @@
 					drawChart();
 				}
 			});
-		}
+		};
 
 		github($stateParams.username).repos.then(function(response){
 			if(response.status === 200){
@@ -62,4 +62,4 @@
       }
 
 	}
-}())
+}());
