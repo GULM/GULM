@@ -25,17 +25,19 @@
 		$scope.getLanguages = function (user,repo) {
 			github($scope.users[user].username).languageData(repo.name).then(function(response){
 				if(response.status === 200){
-					repo.languages = "";
-					for(var i in response.data){
-						if($scope.users[user].mastering[i] === undefined){
-							$scope.users[user].mastering[i] = 0;
-							$scope.users[user].languages += 1;
+					if (repo.fork === false) {
+						repo.languages = "";
+						for(var i in response.data){
+							if($scope.users[user].mastering[i] === undefined){
+								$scope.users[user].mastering[i] = 0;
+								$scope.users[user].languages += 1;
+							}
+							$scope.users[user].mastering[i] += response.data[i];
+							$scope.users[user].lines += response.data[i];
+							repo.languages += i + ", ";
 						}
-						$scope.users[user].mastering[i] += response.data[i];
-						$scope.users[user].lines += response.data[i];
-						repo.languages += i + ", ";
+						drawChart(user);
 					}
-					drawChart(user);
 				}
 			});
 		};
