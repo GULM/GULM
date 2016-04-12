@@ -13,15 +13,17 @@
 		$scope.getLanguages = function (repo) {
 			github($stateParams.username).languageData(repo.name).then(function(response){
 				if(response.status === 200){
-					repo.languages = "";
-					for(var i in response.data){
-						if($scope.mastering[i] === undefined){
-							$scope.mastering[i] = 0;
+					if (repo.fork === false) {
+						repo.languages = "";
+						for(var i in response.data){
+							if($scope.mastering[i] === undefined){
+								$scope.mastering[i] = 0;
+							}
+							$scope.mastering[i] += response.data[i];
+							repo.languages += i + ", ";
 						}
-						$scope.mastering[i] += response.data[i];
-						repo.languages += i + ", ";
+						drawChart();
 					}
-					drawChart();
 				}
 			});
 		};

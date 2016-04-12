@@ -23,7 +23,7 @@
 					<td>Label</td>
 					<td>{{users[0].username}}</td>
 					<td>{{users[1].username}}</td>
-					<td>Win</td>
+					<td>Winner</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -82,7 +82,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="repo in users[0].repos">
+				<tr ng-repeat="repo in users[0].repos" ng-if="!repo.fork">
 					<td>{{$index + 1}}</td>
 					<td ng-init="getLanguages(0,repo)">{{repo.name}}</td>
 					<td>{{repo.languages}}</td>
@@ -102,7 +102,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="repo in users[1].repos">
+				<tr ng-repeat="repo in users[1].repos" ng-if="!repo.fork">
 					<td>{{$index + 1}}</td>
 					<td ng-init="getLanguages(1,repo)">{{repo.name}}</td>
 					<td>{{repo.languages}}</td>

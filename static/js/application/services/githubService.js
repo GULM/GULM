@@ -17,11 +17,11 @@
 			};
 
 			function getReposFn(){
-				return $http.get("https://api.github.com/users/" + username + "/repos"+ urlAuth);
+				return $http.get("https://api.github.com/users/" + username + "/repos" + urlAuth);
 			}
 
 			function getLanguageData(repo){
-				return $http.get("https://api.github.com/repos/" + username +  "/" + repo +  "/languages"+ urlAuth);
+				return $http.get("https://api.github.com/repos/" + username +  "/" + repo +  "/languages" + urlAuth);
 			}
 
 		};

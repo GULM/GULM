@@ -23,7 +23,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="repo in repos">
+					<tr ng-repeat="repo in repos" ng-if="!repo.fork">
 						<td>{{$index + 1}}</td>
 						<td ng-init="getLanguages(repo)">{{repo.name}}</td>
 						<td>{{repo.languages}}</td>
